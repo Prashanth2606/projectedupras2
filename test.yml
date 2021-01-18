@@ -1,0 +1,15 @@
+
+- hosts: PROD
+  become: yes
+  tasks:
+   - name: install webserver
+     yum:
+      name: httpd
+      state: latest
+     when: ansible_distribution == 'RedHat'
+   - name: start the service
+     service: 
+      name: http
+      state: started
+      
+

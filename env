@@ -1,0 +1,12 @@
+[PROD]
+#172.31.90.242
+#172.31.90.108
+172.31.93.97
+
+[all:vars]
+ansible_connection=ssh 
+ansible_ssh_user=devops
+ansible_ssh_pass=devops
+anaible_become_method=sudo
+ansible_become_pass=devops
+
