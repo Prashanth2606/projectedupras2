@@ -1,0 +1,14 @@
+---
+- name: working with variables
+  hosts: all
+  vars:
+    port_names: [8082,8080,443,21,22,233,3213]
+  tasks:
+    - name: Show me fav_color value
+      debug:
+        msg: 
+          - "All the ports are {{ port_names }}" 
+          - "First port is {{ port_names[0] }}"  
+     
+
+      

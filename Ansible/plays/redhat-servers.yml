@@ -1,0 +1,15 @@
+---
+- name: Using When using registers
+  hosts: all
+  tasks:
+    - name: Save the contents of /etc/os-release
+      command: cat /etc/os-release
+      register: os_release
+    - name: dsiplaying contenr
+      debug:
+        msg: Displaying OS Release {{ os_release.stdout_lines }}
+    
+    - name: Detect Redhat Servers
+      debug:
+        msg: "Running REDHAT"
+      when: os_release.stdout.find('Red Hat') != -1  

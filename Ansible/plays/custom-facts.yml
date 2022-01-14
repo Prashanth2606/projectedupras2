@@ -1,0 +1,16 @@
+---
+- name: Adding custom facts to node1
+  hosts: all
+  tasks: 
+    - name: create facts.d directory
+      file:
+        path: /etc/ansible/facts.d
+        owner: learndevops
+        mode: 775
+        state: directory
+    - name: Copy cool.fact to the facts.d directory
+      copy: 
+        src: cool.fact
+        dest: /etc/ansible/facts.d
+     
+

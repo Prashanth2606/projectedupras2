@@ -1,0 +1,6 @@
+- name: Shell command
+  shell: "ls -lart /tmp"
+  register: ls 
+- name: debug commnad
+  debug: var=ls.stdout_lines
+     

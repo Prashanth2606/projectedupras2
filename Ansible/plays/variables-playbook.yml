@@ -1,0 +1,10 @@
+---
+- name: working with variables
+  hosts: all
+  vars:
+    fav_color: yellow
+  tasks:
+    - name: Show me fav_color value
+      debug:
+        msg:  My favorite color is {{ fav_color }}.
+      

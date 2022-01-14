@@ -1,0 +1,13 @@
+---
+- name: Print dictionarly
+  hosts: all
+  vars:
+    employee:
+      name: "Elliot Anderson"
+      title: "Software Tester"
+      company: "Linux hadbook"
+  tasks:
+    - name: Print Employee dictionary
+      debug:
+        msg: " {{ item }} "
+      with_items: " {{ employee | dict2items }} " 

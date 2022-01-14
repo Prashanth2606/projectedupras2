@@ -1,0 +1,11 @@
+---
+- name: print ist
+  hosts: all
+  tasks:
+    - name: show first prime numbers
+      debug:
+        msg: " {{ item }} "
+      loop: 
+        - 2
+        - 3
+        - 5  

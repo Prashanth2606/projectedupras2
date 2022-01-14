@@ -1,0 +1,8 @@
+---
+- name: Print dictionarly
+  hosts: all
+  tasks:
+    - name: Print Range
+      debug:
+        msg: 198.168.1.{{ item }} 
+      with_items: " {{ range(0,256,1) | list }} " 

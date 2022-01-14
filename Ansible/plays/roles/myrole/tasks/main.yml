@@ -1,0 +1,10 @@
+---
+# tasks file for myrole
+- name: 
+  debug:
+    msg: “I am the first task in myrole.”
+    
+- name:
+  debug:
+    msg: “I am the second task in myrole.”
+
